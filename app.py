@@ -9,7 +9,7 @@ from sklearn.naive_bayes import MultinomialNB
 filename = 'model.pkl'
 clf = pickle.load(open(filename, 'rb'))
 cv = pickle.load(open('transform.pkl', 'rb'))
-app = Flask(__name__)
+app = Flask(__name__, template_folder = "templates")
 
 @app.route('/')
 def home():
